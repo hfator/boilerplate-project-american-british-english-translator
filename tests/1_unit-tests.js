@@ -27,89 +27,96 @@ suite('Unit Tests', () => {
         done();
     });
 
-    test('5: Translate Can you toss this in the trashcan for me? to British English', (done) => {
+    test('4: Translate Can you toss this in the trashcan for me? to British English', (done) => {
         const text = 'Can you toss this in the trashcan for me?';
         const expected = 'Can you toss this in the bin for me?';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('6: Translate The parking lot was full. to British English', (done) => {
+    test('5: Translate The parking lot was full. to British English', (done) => {
         const text = 'The parking lot was full.';
         const expected = 'The car park was full.';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('7: Translate Like a high tech Rube Goldberg machine. to British English', (done) => {
+    test('6: Translate Like a high tech Rube Goldberg machine. to British English', (done) => {
         const text = 'Like a high tech Rube Goldberg machine.';
         const expected = 'Like a high tech Heath Robinson device.';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('8: Translate To play hooky means to skip class or work. to British English', (done) => {
+    test('7: Translate To play hooky means to skip class or work. to British English', (done) => {
         const text = 'To play hooky means to skip class or work.';
         const expected = 'To bunk off means to skip class or work.';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('9: Translate No Mr. Bond, I expect you to die. to British English', (done) => {
+    test('8: Translate No Mr. Bond, I expect you to die. to British English', (done) => {
         const text = 'No Mr. Bond, I expect you to die.';
         const expected = 'No Mr Bond, I expect you to die.';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('10: Translate Dr. Grosh will see you now. to British English', (done) => {
+    test('9: Translate Dr. Grosh will see you now. to British English', (done) => {
         const text = 'Dr. Grosh will see you now.';
         const expected = 'Dr Grosh will see you now.';
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('11: Translate Lunch is at 12:15 today. to British English', (done) => {
+    test('10: Translate Lunch is at 12:15 today. to British English', (done) => {
         const text = "Lunch is at 12:15 today.";
         const expected = "Lunch is at 12.15 today.";
         assert.equal(translator.americanToBritish(text, { highlight: false }), expected);
         done();
     });
 
-    test('12: Translate We watched the footie match for a while. to American English', (done) => {
+    test('11: Translate We watched the footie match for a while. to American English', (done) => {
         const text = "We watched the footie match for a while.";
         const expected = 'We watched the soccer match for a while.';
         assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
         done();
     });
 
-    test('13: Translate Paracetamol takes up to an hour to work. to American English', (done) => {
+    test('12: Translate Paracetamol takes up to an hour to work. to American English', (done) => {
         const text = "Paracetamol takes up to an hour to work.";
         const expected = "Tylenol takes up to an hour to work.";
         assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
         done();
     });
 
-    test('14: Translate First, caramelise the onions. to American English', (done) => {
+    test('13: Translate First, caramelise the onions. to American English', (done) => {
         const text = 'First, caramelise the onions.';
         const expected = 'First, caramelize the onions.';
         assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
         done();
     });
 
-    test('15: Translate I spent the bank holiday at the funfair. to American English', (done) => {
+    test('14: Translate I spent the bank holiday at the funfair. to American English', (done) => {
         const text = "I spent the bank holiday at the funfair.";
         const expected = 'I spent the public holiday at the carnival.';
         assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
         done();
     });
 
-    test('16: Translate I had a bicky then went to the chippy. to American English', (done) => {
+    test('15: Translate I had a bicky then went to the chippy. to American English', (done) => {
         const text = "I had a bicky then went to the chippy.";
         const expected = 'I had a cookie then went to the fish-and-chip shop.';
         assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
         done();
     });
+
+    test("16: Translate I've just got bits and bobs in my bum bag. to American English", (done => {
+        const text = "I've just got bits and bobs in my bum bag.";
+        const expected = "I've just got odds and ends in my fanny pack.";
+        assert.equal(translator.britishToAmerican(text, { highlight: false }), expected);
+        done();
+    }))
 
     test('17: Translate The car boot sale at Boxted Airfield was called off. to American English', (done) => {
         const text = 'The car boot sale at Boxted Airfield was called off.';

@@ -58,7 +58,8 @@ class Translator {
         return translatedText;
     }
 
-    americanToBritish(text, options = { highlight: true }) {
+    americanToBritish(text, options = {}) {
+        options.highlight = options.highlight !== undefined ? options.highlight : true;
         text = this.translate(text, [
             this.americanToBritishTitles,
             this.americanToBritishSpelling,
@@ -68,7 +69,8 @@ class Translator {
         return text;
     }
 
-    britishToAmerican(text, options = { highlight: true }) {
+    britishToAmerican(text, options = {}) {
+        options.highlight = options.highlight !== undefined ? options.highlight : true;
         text = this.translate(text, [
             this.britishToAmericanTitles,
             this.britishToAmericanSpelling,

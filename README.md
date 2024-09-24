@@ -38,9 +38,9 @@ This is the boilerplate for the American British Translator project. Instruction
 
 
 - Write the following tests in tests/2_functional-tests.js:
-    - Translation with text and locale fields: POST request to /api/translate
-    - Translation with text and invalid locale field: POST request to /api/translate
-    - Translation with missing text field: POST request to /api/translate
-    - Translation with missing locale field: POST request to /api/translate
-    - Translation with empty text: POST request to /api/translate
+    - Translation with text and locale fields: POST request to /api/translate |
+    - Translation with text and invalid locale field: POST request to /api/translate |
+    - Translation with missing text field: POST request to /api/translate |
+    - Translation with missing locale field: POST request to /api/translate |
+    - Translation with empty text: POST request to /api/translate |
     - Translation with text that needs no translation: POST request to /api/translate

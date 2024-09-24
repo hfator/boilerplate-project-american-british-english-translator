@@ -12,9 +12,7 @@ module.exports = function (app) {
       return res.json({ error: "No text to translate" });
     }
 
-
-
-    if (!text || !locale) {
+    if (text === undefined || locale === undefined) {
       return res.json({ error: "Required field(s) missing" });
     }
 
@@ -22,13 +20,9 @@ module.exports = function (app) {
 
     try {
       if (locale === "american-to-british") {
-        translatedText = translator.americanToBritish(text, highlight);
+        translatedText = translator.americanToBritish(text, { highlight });
       } else if (locale === "british-to-american") {
-        translatedText = translator.translate(text, [
-          translator.britishToAmericanTitles,
-          translator.britishToAmericanSpelling,
-          translator.britishOnly,
-        ], highlight = highlight);
+        translatedText = translator.britishToAmerican(text, { highlight });
       } else {
         return res.json({ error: "Invalid value for locale field" });
       }
